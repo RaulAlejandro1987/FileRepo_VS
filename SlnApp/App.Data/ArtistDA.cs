@@ -19,6 +19,15 @@ namespace App.Data
         {
             return _context.Artist.Count();
         }
+
+
+
+        public Artist Get(int id)
+        {
+            return _context.Artist.Find(id);
+        }
+
+
         public int CountCustomers()
         {
             return _context.Customer.Count();

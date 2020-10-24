@@ -24,6 +24,8 @@ namespace App.UI.Desktop
         {
             if (IsEdit())
             {
+                var ArtistDA = new ArtistDA();
+                var artistInfo = ArtistDA.Get(this.Artist.ArtistId);
                 txtNombre.Text = this.Artist.Name;
             }
         }
