@@ -40,7 +40,7 @@ namespace App.Data
 
         public List<Customer> GetsCustomer(string fitroByNombre)
         {
-            return _context.Customer.Where(d=>d.FirstName.Contains(fitroByNombre)).ToList();
+            return _context.Customer.Where(d => d.FirstName.Contains(fitroByNombre)).ToList();
         }
 
 
