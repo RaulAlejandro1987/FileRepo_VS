@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace App.Data
 {
@@ -25,6 +26,11 @@ namespace App.Data
         public Artist Get(int id)
         {
             return _context.Artist.Find(id);
+        }
+        public Artist GetAll(int id)
+        {
+            //include Edger Loading
+            return _context.Artist.Include(x => x.Album).Where(x=>x.ArtistId==id).FirstOrDefault();
         }
 
 
